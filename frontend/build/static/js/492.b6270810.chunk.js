@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfrontend=self.webpackChunkfrontend||[]).push([[492],{3492:function(e,o,t){t.r(o);var n=t(2791),u=t(7689),r=t(9085),c=t(184);o.default=function(){var e=(0,u.s0)(),o=localStorage.getItem("token");return(0,n.useEffect)((function(){if(!o)return e("/"),void r.Am.success("Already Login");window.confirm("Are you sure you want be logout")&&(localStorage.removeItem("token"),r.Am.success("Logout SuccessFully"),e("/"))}),[o]),(0,c.jsx)("div",{children:"Logout"})}}}]);
+//# sourceMappingURL=492.b6270810.chunk.js.map
