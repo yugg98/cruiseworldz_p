@@ -11,7 +11,7 @@ const Contact = () => {
   const handleSubmit = async () => {
     try {
       const data = await axios.post(
-        "/user/create",
+        "https://cruise-gg3e.onrender.com/user/create",
         {
           name,
           email,
@@ -33,7 +33,7 @@ const Contact = () => {
 
   return (
     <div className="contact" id="contact">
-      <h2>Contact us</h2>
+      <h2>Contact Us</h2>
       <div className="wrap">
         <motion.div
           className="right"
@@ -48,7 +48,7 @@ const Contact = () => {
             </div>
             <div className="data">
               <h5>Email :-</h5>
-              <p>cruiseworldz@gmail.com</p>
+              <p>fit@cruiseworldz.com</p>
             </div>
           </div>
           <div className="box">
@@ -57,7 +57,9 @@ const Contact = () => {
             </div>
             <div className="data">
               <h5>Contact No:-</h5>
-              <p>+91 98842 96297</p>
+              <p>
+                +91 944 2038 894 <br></br> +91 452 3584 861
+              </p>
             </div>
           </div>
           <div className="box">
@@ -67,7 +69,8 @@ const Contact = () => {
             <div className="data">
               <h5>Address:-</h5>
               <p>
-                120,Alagar Kovali main RD, Mellur, Tallakulam,Tamil Nadu 625002
+                World of Cruises, 120 Alagar Kovali Road,Tallakulam (Near
+                AmmaMess), Madurai 625002
               </p>
             </div>
           </div>

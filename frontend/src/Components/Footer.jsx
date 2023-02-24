@@ -52,16 +52,17 @@ const Footer = () => {
             </div>
             <div className="l2">
               <h4>Services</h4>
-              <a href="#">Cruise Service</a>
               <a href="#">Tour & Travel</a>
-              <a href="#">Online ticket</a>
+              <a href="#">Online Ticket</a>
+              <a href="#about">About Us</a>
+              <a href="#">FAQ</a>
             </div>
           </div>
           <div className="right">
             <div className="r1">
               <h4>HelpFull links</h4>
-              <a href="#">About</a>
-              <a href="#">Contact Us</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact Us</a>
               <a href="#">FAQ</a>
               {/* <Link to="/login">Login to Panel</Link> */}
             </div>
@@ -73,7 +74,8 @@ const Footer = () => {
                     width="100%"
                     height="100%"
                     id="gmap_canvas"
-                    src="https://maps.google.com/maps?q=Near Boby Guest House,Lalganj,Raebrali uttarpardesh&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    src="https://maps.google.com/maps?q= World of Cruises 120 Alagar Kovali Road Tallakulam (Near
+                    AmmaMess) Madurai 625002&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     frameBorder="0"
                     scrolling="no"
                     marginHeight="0"
@@ -89,7 +91,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-     
+        <p>
+          <center>Develop by @Startshorts</center>
+        </p>
       </div>
     </>
   );

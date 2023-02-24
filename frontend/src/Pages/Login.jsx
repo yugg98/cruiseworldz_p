@@ -15,7 +15,7 @@ const Login = () => {
     setEmail(values.username);
     setpassword(values.password);
     console.log(email);
-    const data = await axios.post("/login", {
+    const data = await axios.post("https://cruise-gg3e.onrender.com/login", {
       email,
       password,
     });

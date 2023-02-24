@@ -1063,7 +1063,8 @@ section.testinomial .trap .mySwiper .card .right p.p{
   color: var(--primary);
 }
 .contact .wrap .right .box .data{
-  margin-left: 1rem;
+width: 80%;
+margin-left: 1rem;
 }
 .contact .wrap .right .box .data h5{
   color: #979797;
@@ -1071,6 +1072,7 @@ section.testinomial .trap .mySwiper .card .right p.p{
 }
 .contact .wrap .right .box .data p{
   color: #979797;
+  font-size: 0.9rem;
 
 }
 

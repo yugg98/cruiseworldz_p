@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./admin.css";
 import img from "../assets/logo.png";
 import { Space, Table, Tag, Avatar } from "antd";
 import axios from "axios";
 import moment from "moment";
+import { toast } from "react-toastify";
 const AdminPanel = () => {
+  const Navigate = useNavigate();
   const [state, setState] = useState(true);
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
@@ -54,9 +56,17 @@ const AdminPanel = () => {
     },
   ];
 
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token !== "zxcvbnm") {
+      toast.error("Login First !!!!!!!");
+      Navigate("/login");
+    }
+  }, [Navigate]);
+
   const getData = async () => {
     try {
-      const res = await axios.get("/user/get");
+      const res = await axios.get("https://cruise-gg3e.onrender.com/user/get");
       setData(res.data.data);
       console.log(res.data);
     } catch (error) {
