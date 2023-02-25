@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { LoadingOutlined } from "@ant-design/icons";
 import img from "./assets/logo2.png";
 import "react-toastify/dist/ReactToastify.css";
+import { Privacy } from "./Components/Privacy";
 const AllCards = lazy(() => import("./Pages/AllCards"));
 const CreateCard = lazy(() => import("./Pages/CreateCard"));
 const HomeSet = lazy(() => import("./Pages/HomeSet"));
@@ -59,6 +60,8 @@ const App = () => {
             <Route path="/logout" element={<Logout />}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/detail" element={<CardDetailPage />}></Route>
+            <Route path="/privacy-policy" element={<Privacy />}></Route>
+
           </Routes>
         </Suspense>
       </div>

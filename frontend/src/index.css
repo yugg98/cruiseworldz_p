@@ -72,6 +72,10 @@ section.home .bannerVideo video.active{
   margin
 
 } */
+.yug{
+  padding: 20px;
+  margin: 20px;
+}
 .container header{
   position: absolute;
   top: 0;

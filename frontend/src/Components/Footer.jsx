@@ -4,34 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      {/* <div className="icons">
-        <ul>
-          <a href="#">
-            <li className="facebook">
-              {" "}
-              <i className="bx bxl-whatsapp"></i>
-            </li>
-          </a>
-          <a href="#">
-            <li className="twitter">
-              {" "}
-              <i className="bx bxl-instagram"></i>
-            </li>
-          </a>
-          <a href="#">
-            <li className="youtube1">
-              {" "}
-              <i className="bx bxl-facebook"></i>
-            </li>
-          </a>
-          <a href="#">
-            <li className="linkedin">
-              {" "}
-              <i className="bx bxl-youtube"></i>
-            </li>
-          </a>
-        </ul>
-      </div> */}
+    
 
       <div className="footer">
         <div className="wrap">
@@ -44,18 +17,17 @@ const Footer = () => {
                 experiences for our guests.
               </p>
               <div className="social">
-                <i class="bx bxl-whatsapp"></i>
-                <i class="bx bxl-instagram"></i>
-                <i class="bx bxl-facebook"></i>
-                <i class="bx bxl-youtube"></i>
+                <a href="https://wa.me/9442038894"><i class="bx bxl-whatsapp"></i></a>
+                <a href="https://www.instagram.com/cruiseworldz/"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100089809549769"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.linkedin.com/company/cruise-worldz/"><i class="bx bxl-linkedin"></i></a>
               </div>
             </div>
             <div className="l2">
               <h4>Services</h4>
-              <a href="#">Tour & Travel</a>
-              <a href="#">Online Ticket</a>
-              <a href="#about">About Us</a>
-              <a href="#">FAQ</a>
+              <Link href="/privacy-policy">Privacy Policy</Link>
+              <a href="#service">Our Cruises</a>
+              <a href="#service">Our Services</a>
             </div>
           </div>
           <div className="right">
@@ -63,8 +35,6 @@ const Footer = () => {
               <h4>HelpFull links</h4>
               <a href="#about">About</a>
               <a href="#contact">Contact Us</a>
-              <a href="#">FAQ</a>
-              {/* <Link to="/login">Login to Panel</Link> */}
             </div>
             <div className="r2">
               <h4>Our Location</h4>
@@ -91,9 +61,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p>
-          <center>Develop by @Startshorts</center>
-        </p>
       </div>
     </>
   );

@@ -66,7 +66,7 @@ const AdminPanel = () => {
 
   const getData = async () => {
     try {
-      const res = await axios.get("https://cruise-gg3e.onrender.com/user/get");
+      const res = await axios.get("user/get");
       setData(res.data.data);
       console.log(res.data);
     } catch (error) {

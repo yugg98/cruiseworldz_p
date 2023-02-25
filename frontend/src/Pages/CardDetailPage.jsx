@@ -1,9 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Image } from "antd";
+import Footer from "../Components/Footer";
 const CardDetailPage = ({}) => {
   const { card } = useSelector((state) => state.user);
   return (
+    <>
     <div className="cardDetail">
       <div className="banner">
         <img src={card?.BannerLink} alt="" />
@@ -25,6 +27,8 @@ const CardDetailPage = ({}) => {
         ))}
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
