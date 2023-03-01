@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect, useLayoutEffect } from "react";
 import { Image } from "antd";
 import Footer from "../Components/Footer";
 import Testinomials from '../Components/Testinomials'
@@ -6,13 +6,24 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 const parse = require('html-react-parser')
 const CardDetailPage = ({}) => {
-  const [card,setCard] = useState({})
-  const params = useParams()
+  const [card,setCard] = useState({
+    startLocation:"Hello",
+    endLocation:"Hello",
+    BannerLink:"Hell",
+    SomeMoreImages:[]
 
-  useEffect(() => {
+  })
+  const params = useParams()
+  console.log("Card1",params.slug)
+  useLayoutEffect(() => {
+    console.log("Card",params.id)
     axios.post('/cruise/getd',{
       slug:params.slug
-    }).then(res=>setCard(res.data))
+    }).then(res=>{
+      setCard(res.data[0])
+      console.log(card,res.data)
+    })
+    .catch(err => console.log("Error"))
   }, [])
   
   return (
@@ -23,7 +34,7 @@ const CardDetailPage = ({}) => {
       </div>
       <div style={{padding:'10px 50px'}}>
       <h2>{card?.name}</h2>
-      <div >{parse(card?.description)}</div>
+      <div >{card?.description ? parse(card?.description) : ""}</div>
       <h4>
         <i className="bx bx-map"></i>
         Start Location:- <span>{card?.startLocation}</span>
