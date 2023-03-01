@@ -11,6 +11,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Provider store={store}>
       <BrowserRouter>
         <App />
+        <a href="https://wa.me/9442038894" className="whatsapp"><i class="bx bxl-whatsapp "></i></a>
+
       </BrowserRouter>
     </Provider>
   </React.StrictMode>

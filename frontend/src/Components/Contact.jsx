@@ -11,7 +11,7 @@ const Contact = () => {
   const handleSubmit = async () => {
     try {
       const data = await axios.post(
-        "https://cruise-gg3e.onrender.com/user/create",
+        "/user/create",
         {
           name,
           email,

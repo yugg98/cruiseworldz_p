@@ -59,9 +59,9 @@ const App = () => {
             <Route path="/display/review" element={<DisplayReview />}></Route>
             <Route path="/logout" element={<Logout />}></Route>
             <Route path="/login" element={<Login />}></Route>
-            <Route path="/detail" element={<CardDetailPage />}></Route>
+            <Route path="/detail/:slug" element={<CardDetailPage />}></Route>
             <Route path="/privacy-policy" element={<Privacy />}></Route>
-
+            
           </Routes>
         </Suspense>
       </div>

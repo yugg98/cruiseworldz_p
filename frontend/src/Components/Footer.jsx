@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
             <div className="l2">
               <h4>Services</h4>
-              <Link href="/privacy-policy">Privacy Policy</Link>
+              <Link to="/privacy-policy">Privacy Policy</Link>
               <a href="#service">Our Cruises</a>
               <a href="#service">Our Services</a>
             </div>

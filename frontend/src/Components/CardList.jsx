@@ -5,6 +5,8 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { motion } from "framer-motion";
 import { LoadingOutlined } from "@ant-design/icons";
+const parse = require('html-react-parser');
+
 const CardList = () => {
   const dispatch = useDispatch();
   const Navigate = useNavigate();
@@ -12,7 +14,7 @@ const CardList = () => {
   const [loading, setLoading] = useState(false);
   const handleSubmit = (data) => {
     dispatch({ type: "card", payload: data });
-    Navigate("/detail");
+    Navigate("/detail/"+data?._id);
   };
 
   const fetchCard = async () => {
@@ -90,11 +92,11 @@ const CardList = () => {
                     4.5 <i class="bx bxs-star"></i>
                   </span>
                 </h4>
-                <p>{data?.description.substring(60, [0])} ...</p>
+                <p>you are going to get best vacation experience here at {data.name}....</p>
                 <div className="avr">
                   <i class="bx bx-comment-dots"></i>
                   <p className="sp">
-                    +2 Reviews{" "}
+                    +1 Reviews{" "}
                     <a href="https://wa.me/9442038894">
                       <i class="bx bxl-whatsapp"></i>
                     </a>

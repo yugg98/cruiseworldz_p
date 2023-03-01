@@ -16,7 +16,7 @@ export const Navbar = () => {
     return (
         <div className="hello">
             <header id="navbar">
-                <img src={logo} alt="logo" className="logo" />
+                <img src={logo} alt="logo" className="logo" style={{width:'12rem',height:'12rem'}} />
 
                 <ul>
                     <li>

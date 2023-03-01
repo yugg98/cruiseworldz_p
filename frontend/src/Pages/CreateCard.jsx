@@ -74,12 +74,13 @@ const CreateCard = () => {
         </div>
         <div className="form">
           <label>Description</label>
-          <input
+          <textarea
             value={dis}
             onChange={(e) => setDis(e.target.value)}
             type="text"
+            style={{height:'250px',padding:'10px'}}
             placeholder="Enter Post Description"
-          ></input>
+          ></textarea>
         </div>
         <div className="form">
           <label>Date</label>

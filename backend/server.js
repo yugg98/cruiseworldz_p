@@ -56,6 +56,11 @@ app.get("/cruise/get", async (req, res) => {
   .exec();
   res.status(200).json(cruise);
 });
+app.post("/cruise/getd", async (req, res) => {
+  const cruise = await Cruise.find({_id:req.body.slug});
+  console.log(cruise);
+  res.status(200).json(cruise);
+});
 app.get("/cruise/get2", async (req, res) => {
   const cruise = await Cruise.find().limit(9).sort([['createdAt',"desc"]])
   .exec();
@@ -119,7 +124,13 @@ app.post("/review/delete", async (req, res) => {
   res.status(200).json(cruise);
 });
 
-app.get("/review/get", async (req, res) => {
+app.post("/review/getcruise", async (req, res) => {
+  const cruise = await Review.find({cruiseSlug:req.body.cruiseSlug})
+  .exec();
+  res.status(200).json(cruise);
+});
+
+app.post("/review/get", async (req, res) => {
   const cruise = await Review.find().sort([['createdAt',"desc"]])
   .exec();
   res.status(200).json(cruise);

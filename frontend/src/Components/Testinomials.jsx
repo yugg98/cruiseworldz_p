@@ -1,15 +1,41 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
+import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import img1 from "../assets/c1.jpg";
 import img2 from "../assets/c2.jpg";
 import img3 from "../assets/c3.jpg";
 import img4 from "../assets/c4.jpg";
+import { useLocation } from 'react-router-dom'
 import { motion } from "framer-motion";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-const Testinomials = () => {
+const Testinomials = ({own}) => {
+  const location = useLocation();
+  console.log(location.pathname);
+  var parts = location.pathname.split("/");
+  console.log(parts)
+ 
+
+  const [testimonials,setTestimonials] = useState([])
+  useEffect(() => {
+     if(parts[1]=="details"){
+    axios.post('/review/getcruise',{
+      cruiseSlug:parts[2],
+    }).then((response) => {
+      setTestimonials(response.data)
+      console.log(response.data)
+    });
+  }
+  else{
+    axios.post('/review/get').then((response) => {
+      setTestimonials(response.data)
+      console.log(response.data)
+    });
+  }
+  }, [])
+  
   return (
     <section className="testinomial">
       <motion.h2
@@ -38,96 +64,30 @@ const Testinomials = () => {
           className="mySwiper"
           autoplay={true}
         >
+          {testimonials?.map(e=>(
           <SwiperSlide className="card">
             <div className="left">
-              <img src={img1} alt="img" />
+              <img src={e.imageLink} alt="img" />
             </div>
             <div className="right">
-              <h4>jay uso</h4>
+              <h4>{e.name}</h4>
               <p>
-                +5{" "}
+                +{e.star}{" "}
                 <span>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+
                 </span>
               </p>
               <p className="p">
-                I recently used this travel website to book a trip to Paris, and
-                I was extremely impressed with the selection of hotels and
-                flights available.
+               {e.review}
               </p>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="card">
-            {" "}
-            <div className="left">
-              <img src={img2} alt="img" />
-            </div>
-            <div className="right">
-              <h4>Gaurav Bajpai</h4>
-              <p>
-                +5{" "}
-                <span>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                </span>
-              </p>
-              <p className="p">
-                I have been using this travel website for years now, and it has
-                consistently provided me with great deals and excellent service.
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="card">
-            <div className="left">
-              <img src={img3} alt="img" />
-            </div>
-            <div className="right">
-              <h4>Rahul singh</h4>
-              <p>
-                +4{" "}
-                <span>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                </span>
-              </p>
-              <p className="p">
-                I have. I highly recommend this website to anyone looking for
-                affordable and hassle-free travel options
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="card">
-            {" "}
-            <div className="left">
-              <img src={img4} alt="img" />
-            </div>
-            <div className="right">
-              <h4>Maya </h4>
-              <p>
-                +4{" "}
-                <span>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                  <i class="bx bxs-star"></i>
-                </span>
-              </p>
-              <p className="p">
-                The website is user-friendly and easy to navigate, and the
-                customer support team is always available to answer any
-                questions I have.
-              </p>
-            </div>
-          </SwiperSlide>
+          ))}
+         
         </Swiper>
         <div className="card"></div>
       </motion.div>

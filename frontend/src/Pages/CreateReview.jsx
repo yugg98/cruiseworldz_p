@@ -30,7 +30,7 @@ const CreateReview = () => {
 
   const handleSubmit = () => {
     try {
-      console.log(cid);
+      console.log(cid+"Hello",name);
       if (
         name == "" ||
         review == "" ||
