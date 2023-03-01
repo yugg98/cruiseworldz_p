@@ -63,6 +63,7 @@ const CreateCard = () => {
     <div className="create">
       <div className="wrap">
         <h2>Create Post</h2>
+        <p style={{fontSize:'20px',textAlign:"center"}}>Get Html from <a href="https://wordtohtml.net/">wordtohtml</a></p>
         <div className="form">
           <label>Name</label>
           <input
