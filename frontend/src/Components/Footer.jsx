@@ -33,8 +33,8 @@ const Footer = () => {
           <div className="right">
             <div className="r1">
               <h4>HelpFull links</h4>
-              <Link href="/#about">About</Link>
-              <Link href="/#contact">Contact Us</Link>
+              <Link to="/#about">About</Link>
+              <Link to="/#contact">Contact Us</Link>
             </div>
             <div className="r2">
               <h4>Our Location</h4>
