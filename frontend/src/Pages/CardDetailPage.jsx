@@ -32,7 +32,7 @@ const CardDetailPage = ({}) => {
       <div className="banner">
         <img src={card?.BannerLink} alt="" />
       </div>
-      <div style={{padding:'10px 50px'}}>
+      <div className="descc">
       <h2>{card?.name}</h2>
       <div >{card?.description ? parse(card?.description) : ""}</div>
       <h4>

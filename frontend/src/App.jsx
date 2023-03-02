@@ -50,17 +50,17 @@ const App = () => {
           <ToastContainer />
           <Routes>
             <Route path="/" element={<HomeSet />}></Route>
-            <Route path="/view" element={<AllCards />}></Route>
-            <Route path="/create" element={<CreateCard />}></Route>
-            <Route path="/update/:_id" element={<UpdateCard />}></Route>
-            <Route path="/create/review" element={<CreateReview />}></Route>
-            <Route path="/admin" element={<AdminPanel />}></Route>
-            <Route path="/display" element={<DisplayPost />}></Route>
-            <Route path="/display/review" element={<DisplayReview />}></Route>
-            <Route path="/logout" element={<Logout />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/detail/:slug" element={<CardDetailPage />}></Route>
-            <Route path="/privacy-policy" element={<Privacy />}></Route>
+            <Route exact path="/view"  element={<AllCards />}></Route>
+            <Route exact path="/create" element={<CreateCard />}></Route>
+            <Route exact path="/update/:_id" element={<UpdateCard />}></Route>
+            <Route exact path="/create/review" element={<CreateReview />}></Route>
+            <Route exact path="/admin" element={<AdminPanel />}></Route>
+            <Route exact path="/display" element={<DisplayPost />}></Route>
+            <Route exact path="/display/review" element={<DisplayReview />}></Route>
+            <Route exact path="/logout" element={<Logout />}></Route>
+            <Route exact path="/login" element={<Login />}></Route>
+            <Route exact path="/detail/:slug" element={<CardDetailPage />}></Route>
+            <Route exact path="/privacy-policy" element={<Privacy />}></Route>
             
           </Routes>
         </Suspense>

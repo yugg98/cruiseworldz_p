@@ -19,6 +19,14 @@
 	--orange:#F6980A;
 	--red:#FB0D0D;
 }
+.descc {
+  padding: 10px 50px;
+}
+@media screen and (max-width: 568px) {
+  .descc {
+    padding: 10px;
+  }
+}
 
 .whatsapp {
   position: fixed;

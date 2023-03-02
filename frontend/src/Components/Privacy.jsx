@@ -1,8 +1,12 @@
 import React from 'react'
+import Footer from './Footer'
+import { Navbar } from './Navbar'
 
 export const Privacy = () => {
     return (
-        <div className="yug" style={{ margin: '40px' }}>
+        <>
+
+        <div className="descc" >
             <h1 style={{textAlign:'center'}}>CruiseWorldz</h1>
             <h1 className=''>Privacy Policy</h1> <p>
                 Cruiseworldz built the Cruiseworldz app as
@@ -103,5 +107,8 @@ export const Privacy = () => {
                 Privacy Policy, do not hesitate to contact us at fit@cruiseworldz.com.
             </p>
         </div>
+        <Footer/>
+
+        </>
     )
 }

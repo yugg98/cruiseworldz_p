@@ -1,6 +1,6 @@
 import React from "react";
 import img from "../assets/logo2.png";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 const Footer = () => {
   return (
     <>
@@ -26,15 +26,15 @@ const Footer = () => {
             <div className="l2">
               <h4>Services</h4>
               <Link to="/privacy-policy">Privacy Policy</Link>
-              <a href="#service">Our Cruises</a>
-              <a href="#service">Our Services</a>
+              <Link to="/#service">Our Cruises</Link>
+              <Link to="/#service">Our Services</Link>
             </div>
           </div>
           <div className="right">
             <div className="r1">
               <h4>HelpFull links</h4>
-              <a href="#about">About</a>
-              <a href="#contact">Contact Us</a>
+              <Link href="/#about">About</Link>
+              <Link href="/#contact">Contact Us</Link>
             </div>
             <div className="r2">
               <h4>Our Location</h4>
